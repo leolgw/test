@@ -1,0 +1,12 @@
+name: linter
+on: push
+jobs:
+  linter:
+   name: lint code base
+   runs-on: ubuntu-lasted
+   steps:
+    -name: checkout code
+    uses: actions/checkout@^2
+    env:
+     DEDAULT_BRANCH:main
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
